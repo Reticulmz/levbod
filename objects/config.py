@@ -37,7 +37,7 @@ class Config:
 
 	def write_default(self):
 		with open(self.file_name, "w") as f:
-			f.write(json.dumps(self.default_config))
+			f.write(json.dumps(self.default_config, sort_keys=True, indent=4))
 
 	def check(self):
 		def shape(d):

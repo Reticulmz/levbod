@@ -19,6 +19,10 @@ class Config:
 			},
 			"mirror": {
 				"data_path": "data"
+			},
+			"server": {
+				"threads": 4,
+				"port": 5588
 			}
 		}
 		self.file_name = file_name

@@ -9,7 +9,8 @@ def get_data_folder():
 def get_beatmap(beatmap_id):
 	try:
 		with codecs.open("{}/b/{}.json".format(get_data_folder(), beatmap_id), "r", "utf-8") as f:
-			data =  json.loads(f.read())
+			data = json.loads(f.read())
+		data["Mode"] = int(data["Mode"])
 	except (json.JSONDecodeError, ValueError, FileNotFoundError):
 		data = None
 	return data

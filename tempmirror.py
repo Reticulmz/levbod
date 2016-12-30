@@ -3,9 +3,11 @@ from multiprocessing.pool import ThreadPool
 
 import tornado.ioloop
 
+from web.handlers import listing
+from web.handlers import beatmapset
+from web.handlers import beatmap
 from db import pool
 from objects import glob
-from web.handlers import listing
 from utils import console
 from constants import bcolors
 from objects import config
@@ -50,5 +52,7 @@ print("> Web server started on 0.0.0.0:{}".format(glob.config.config["server"]["
 glob.pool = ThreadPool(glob.config.config["server"]["threads"])
 tornado.web.Application([
 	(r"/listing", listing.Handler),
+	(r"/beatmapset", beatmapset.Handler),
+	(r"/beatmap", beatmap.Handler),
 ]).listen(glob.config.config["server"]["port"])
 tornado.ioloop.IOLoop.instance().start()

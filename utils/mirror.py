@@ -1,4 +1,5 @@
 import json
+import codecs
 
 from objects import glob
 
@@ -7,7 +8,7 @@ def get_data_folder():
 
 def get_beatmap(beatmap_id):
 	try:
-		with open("{}/b/{}.json".format(get_data_folder(), beatmap_id), "r") as f:
+		with codecs.open("{}/b/{}.json".format(get_data_folder(), beatmap_id), "r", "utf-8") as f:
 			data =  json.loads(f.read())
 	except (json.JSONDecodeError, ValueError, FileNotFoundError):
 		data = None
@@ -15,7 +16,7 @@ def get_beatmap(beatmap_id):
 
 def get_index():
 	try:
-		with open("{}/index.json".format(get_data_folder()), "r") as f:
+		with codecs.open("{}/index.json".format(get_data_folder()), "r", "utf-8") as f:
 			data =  json.loads(f.read())
 	except (json.JSONDecodeError, ValueError, FileNotFoundError):
 		data = None

@@ -68,6 +68,7 @@ if __name__ == "__main__":
 		print("Couldn't read index.json")
 		sys.exit()
 	glob.db.execute("TRUNCATE TABLE beatmapsets")
+	glob.db.execute("TRUNCATE TABLE child_beatmaps")
 
 	# Spawn workers
 	workers = []

@@ -63,6 +63,8 @@ server {
 }
 ```
 
+### [API Documentation](http://docs.ripple.moe/docs/levbod/api)
+
 ### LICENSE
 All code in this repository is licensed under the GNU AGPL 3 License.
 See the "LICENSE" file for more information

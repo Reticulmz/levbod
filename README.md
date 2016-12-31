@@ -2,6 +2,10 @@
 ### Le very basic osu!direct
 #### A temporary osu!direct api when bloodcat goes offline
 
+- Origin: https://git.zxq.co/ripple/levbod
+- Mirror: https://github.com/osuripple/levbod
+
+
 This software is an api with osu!direct features that can be used with the [ripple static mirror](https://git.zxq.co/ripple/mirror).
 `index.json`'s content is saved in a MySQL database, for performance reasons, and info of single beatmaps is read from the json files in `b/` mirror's data folder.
 
